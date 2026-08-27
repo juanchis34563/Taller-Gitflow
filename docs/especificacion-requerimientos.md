@@ -46,7 +46,7 @@ Permite a un profesor programar y registrar una nueva tutoría académica en el 
 #### Resultado esperado
 La tutoría queda registrada correctamente en el sistema con un identificador único asignado, sus cupos iniciales disponibles son iguales a la cantidad máxima configurada, y se encuentra disponible para consulta por parte de los estudiantes.
 
-# RF-02 - Consultar tutorías disponibles
+### RF-02 - Consultar tutorías disponibles
 
 #### Resumen
 
