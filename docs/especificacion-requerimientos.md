@@ -141,6 +141,12 @@ La inscripción queda registrada exitosamente en el sistema, la cantidad de cupo
 
 ### Ramas utilizadas
 
+feat/names-description, feature/rf01-registro-tutoria, feature/rf02, feature/rf03-inscripcion-tutoria, feat/gestion-versiones
+
 ### Proceso de integración
 
+Primero se hizo la base de todo en main, despues se hizo un pull desde develop, y se trabajó en develop desde ramas aparte (feature), las cuales fueron unidas a develop cuando fueron terminadas.
+
 ### Conflictos encontrados
+
+Al trabajar en ramas diferentes al mismo tiempo, no se actualiza automaticamente, entonces toca hacer el pull de develop antes de hacer cualquier merge, también se hizo el commit de el requerimiento 4 directamente a main de manera accidental.
