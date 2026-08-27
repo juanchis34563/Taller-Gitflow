@@ -2,12 +2,14 @@
 
 ## 1. Descripción del sistema
 
+Sistema de manejo de tutorías
+
 ## 2. Integrantes
 
-- Nombre:
-- Nombre:
-- Nombre:
-- Nombre:
+- Nombre: Juan Felipe Uribe
+- Nombre: Santiago Mesias
+- Nombre: Juan Esteban Victoria
+- Nombre: Samuel Ocampo Coral
 - Nombre:
 
 ## 3. Requerimientos Funcionales
