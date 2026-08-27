@@ -2,12 +2,14 @@
 
 ## 1. Descripción del sistema
 
+Sistema de manejo de tutorías
+
 ## 2. Integrantes
 
-- Nombre:
-- Nombre:
-- Nombre:
-- Nombre:
+- Nombre: Juan Felipe Uribe
+- Nombre: Santiago Mesias
+- Nombre: Juan Esteban Victoria
+- Nombre: Samuel Ocampo Coral
 - Nombre:
 
 ## 3. Requerimientos Funcionales
@@ -50,23 +52,37 @@
 #### Resultado esperado
 
 
-### RF-03 - [Nombre del requerimiento]
+### RF-03 - Inscripción a Tutoría Académica
 
 #### Resumen
+
+Permite a un estudiante autenticado consultar el detalle de una tutoría disponible y registrar su inscripción en ella, siempre y cuando existan cupos suficientes y no presente cruce de horarios con otras tutorías previamente inscritas.
 
 #### Entradas
 
 | Entrada | Tipo de dato | Descripción |
 |---|---|---|
+| codigoEstudiante | String | Identificador único del estudiante que solicita la inscripción. |
+| idTutoria | String | Identificador único de la tutoría académica a la cual desea inscribirse. |
 
 #### Reglas o condiciones
+
+- El estudiante no puede inscribirse a una tutoría que ya no tenga cupos disponibles (cuposDisponibles > 0).
+- Un estudiante no puede inscribirse más de una vez a la misma tutoría.
+- El estudiante no debe tener inscrita otra tutoría en la misma fecha y rango de hora.
+- Todos los campos de entrada son obligatorios.
 
 #### Salidas
 
 | Salida | Tipo de dato | Descripción |
 |---|---|---|
+| idInscripcion | String | Identificador único generado por el sistema para la inscripción realizada. |
+| estadoInscripcion | String | Estado del registro (ej. "CONFIRMADA"). |
+| mensajeConfirmacion | String | Mensaje de notificación informando al estudiante la confirmación del cupo. |
 
 #### Resultado esperado
+
+La inscripción queda registrada exitosamente en el sistema, la cantidad de cupos disponibles de la tutoría se reduce en 1 y la tutoría aparece en el historial o agenda de tutorías del estudiante.
 
 
 ### RF-04 - Cancelación de Inscripcion a una Tutoría.
@@ -104,6 +120,12 @@ Caso fallido:
 
 ### Ramas utilizadas
 
+feat/names-description, feature/rf01-registro-tutoria, feature/rf02, feature/rf03-inscripcion-tutoria, feat/gestion-versiones
+
 ### Proceso de integración
 
+Primero se hizo la base de todo en main, despues se hizo un pull desde develop, y se trabajó en develop desde ramas aparte (feature), las cuales fueron unidas a develop cuando fueron terminadas.
+
 ### Conflictos encontrados
+
+Al trabajar en ramas diferentes al mismo tiempo, no se actualiza automaticamente, entonces toca hacer el pull de develop antes de hacer cualquier merge, también se hizo el commit de el requerimiento 4 directamente a main de manera accidental.
